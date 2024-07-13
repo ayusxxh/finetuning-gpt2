@@ -46,4 +46,21 @@ Model Saving:
 After training, the fine-tuned model and tokenizer are saved to "./fine_tuned_gpt2".
 This allows for easy loading and use of the model in future sessions.
 
+Response Generation Function:
 
+generate_responses(): This function takes a list of prompts, tokenizes them, and generates responses using the specified model. It controls the generation process to avoid repetition and adjusts the temperature for diverse outputs.
+Test Prompts:
+
+A list of test prompts addresses common customer concerns about product customization, reliability, reporting capabilities, mobile features, and third-party integrations.
+Generating and Comparing Responses:
+
+The function generate_responses() is used to generate responses to the test prompts from both the base and fine-tuned models.
+
+The fine-tuned model's response to the training concern prompt (from earlier) shows it handles customer objections more effectively by addressing specific concerns, asking relevant questions, and highlighting product benefits.
+
+Calculating Perplexity for Both Models:
+
+The function calculate_perplexity() is used to compute the perplexity for both the base GPT-2 model and the fine-tuned GPT-2 model using the test prompts.
+Output:
+
+The perplexity values for both models are printed, showing that the fine-tuned model has a lower perplexity, indicating it better predicts the given prompts compared to the base model.
